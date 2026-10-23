@@ -1,8 +1,8 @@
 #include <Arduino.h>
 
 // LED GPIO pins
-const int LED1 = 18;
-const int LED2 = 19;
+const int LED1 = 25;
+const int LED2 = 26;
 
 // Separate LEDC channels
 const int CHANNEL1 = 0;
@@ -34,7 +34,7 @@ void setup()
 void loop()
 {
     // Fade LED 1 up and LED 2 down
-    for (int duty = 0; duty <= 255; duty++)
+    for (int duty = 0; duty <= 255; duty += 3)
     {
         duty1 = duty;
         duty2 = 255 - duty;
@@ -52,7 +52,7 @@ void loop()
     }
 
     // Fade LED 1 down and LED 2 up
-    for (int duty = 255; duty >= 0; duty--)
+    for (int duty = 255; duty >= 0; duty -= 3)
     {
         duty1 = duty;
         duty2 = 255 - duty;

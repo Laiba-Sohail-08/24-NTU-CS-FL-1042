@@ -3,56 +3,18 @@
   "author": "Laiba Sohail",
   "editor": "wokwi",
   "parts": [
-    {
-      "type": "board-esp32-devkit-c-v4",
-      "id": "esp",
-      "top": 0,
-      "left": 0,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led1",
-      "top": -20,
-      "left": 250,
-      "attrs": {
-        "color": "red"
-      }
-    },
-    {
-      "type": "wokwi-resistor",
-      "id": "r1",
-      "top": 50,
-      "left": 230,
-      "attrs": {
-        "value": "220"
-      }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led2",
-      "top": 120,
-      "left": 250,
-      "attrs": {
-        "color": "blue"
-      }
-    },
-    {
-      "type": "wokwi-resistor",
-      "id": "r2",
-      "top": 190,
-      "left": 230,
-      "attrs": {
-        "value": "220"
-      }
-    }
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -50, "left": 250, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 0, "left": 220, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led2", "top": 80, "left": 250, "attrs": { "color": "green" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 130, "left": 220, "rotate": 90, "attrs": { "value": "220" } }
   ],
   "connections": [
-    ["esp:18", "r1:1", "green", []],
-    ["r1:2", "led1:A", "green", []],
+    ["esp:25", "r1:1", "orange", []],
+    ["r1:2", "led1:A", "orange", []],
     ["led1:C", "esp:GND.1", "black", []],
-    ["esp:19", "r2:1", "blue", []],
-    ["r2:2", "led2:A", "blue", []],
+    ["esp:26", "r2:1", "red", []],
+    ["r2:2", "led2:A", "red", []],
     ["led2:C", "esp:GND.1", "black", []]
   ],
   "dependencies": {}
