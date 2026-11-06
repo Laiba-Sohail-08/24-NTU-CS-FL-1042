@@ -28,6 +28,25 @@
             "attrs": {
                 "color": "green"
             }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r2",
+            "top": 40,
+            "left": 330,
+            "rotate": 90,
+            "attrs": {
+                "value": "220"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led2",
+            "top": 102,
+            "left": 353.4,
+            "attrs": {
+                "color": "red"
+            }
         }
     ],
     "connections": [
@@ -58,6 +77,36 @@
             [
                 "v30.8",
                 "h-381.8",
+                "v-86.4"
+            ]
+        ],
+        [
+            "esp:26",
+            "r2:1",
+            "green",
+            [
+                "h-28.65",
+                "v-115.2",
+                "h426.55"
+            ]
+        ],
+        [
+            "r2:2",
+            "led2:A",
+            "green",
+            [
+                "h47.85",
+                "v88.4",
+                "h-28.8"
+            ]
+        ],
+        [
+            "led2:C",
+            "esp:GND.1",
+            "black",
+            [
+                "v30.8",
+                "h-281.8",
                 "v-86.4"
             ]
         ]
